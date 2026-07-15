@@ -166,7 +166,7 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-window.addEventListener("mousedown", function (event) {
+window.addEventListener("pointerdown", function () {
   if (phase == "waiting") {
     lastTimestamp = undefined;
     introductionElement.style.opacity = 0;
@@ -175,30 +175,11 @@ window.addEventListener("mousedown", function (event) {
   }
 });
 
-window.addEventListener("mouseup", function (event) {
+window.addEventListener("pointerup", function () {
   if (phase == "stretching") {
     phase = "turning";
   }
 });
-// รองรับการกดบนมือถือ
-window.addEventListener("touchstart", function (event) {
-  event.preventDefault();
-
-  if (phase == "waiting") {
-    lastTimestamp = undefined;
-    introductionElement.style.opacity = 0;
-    phase = "stretching";
-    window.requestAnimationFrame(animate);
-  }
-}, { passive: false });
-
-window.addEventListener("touchend", function (event) {
-  event.preventDefault();
-
-  if (phase == "stretching") {
-    phase = "turning";
-  }
-}, { passive: false });
 
 window.addEventListener("resize", function (event) {
   canvas.width = window.innerWidth;
