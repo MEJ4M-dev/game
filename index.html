@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stick Hero Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<div id="lobby">
+
+    <div class="cover">
+
+        <h1>เกมกุ่ยๆให้หมูเล่น</h1>
+
+        <div class="characterFrame">
+            <img src="hero.png" id="heroCover">
+        </div>
+
+        <p>ดีจ้าามาละหรอไอหมู 🐷</p>
+
+        <button id="playBtn">▶ PLAY</button>
+
+    </div>
+
+</div>
+  <div class="container" id="gameContainer">
+    <div id="score"></div>
+    <canvas id="game" width="375" height="375"></canvas>
+    <div id="introduction">กดปุ่มเมาส์ค้างไว้เพื่อยืดแท่งไม้</div>
+    <div id="perfect">กดสองครั้ง</div>
+    <button id="restart">เริ่มใหม่</button>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

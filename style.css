@@ -1,0 +1,166 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#score {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#introduction {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.8em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: opacity 2s;
+}
+
+#restart {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  border: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: none;
+  cursor: pointer;
+}
+
+#perfect {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s;
+}
+/* ---------- Lobby ---------- */
+
+#lobby{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#89f7fe,#66a6ff);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+#lobby h1{
+    font-size:60px;
+    color:white;
+    margin-bottom:10px;
+    text-shadow:2px 2px 8px black;
+}
+
+#lobby p{
+    color:white;
+    font-size:22px;
+    margin-bottom:40px;
+}
+
+#playBtn{
+    padding:18px 60px;
+    font-size:24px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:#ff5252;
+    color:white;
+    transition:.3s;
+    font-weight:bold;
+}
+
+#playBtn:hover{
+    transform:scale(1.08);
+    background:#ff3131;
+}
+
+#gameContainer{
+    display:none;
+}
+/* ---------- กล่องหน้า Lobby ---------- */
+
+.cover{
+    width: 650px;
+    padding: 30px;
+    text-align: center;
+
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(10px);
+
+    border: 5px solid white;
+    border-radius: 30px;
+
+    box-shadow: 0 0 30px rgba(0,0,0,.3);
+}
+
+/* ---------- กรอบรูป ---------- */
+
+.cover{
+    width: 520px;
+    padding: 25px;
+}
+
+.characterFrame{
+    width: 360px;
+    height: 450px;
+
+    margin: 20px auto;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 0 15px gold,
+        0 0 35px rgba(255,255,255,.6);
+}
+
+#heroCover{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ถ้ารูปมีพื้นหลัง ใช้ contain */
+    /* object-fit: cover; ถ้าอยากให้เต็มกรอบ */
+}
+
+/* ---------- ขนาดตัวอักษร ---------- */
+
+.cover h1{
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    margin-bottom: 10px;
+}
+
+.cover p{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
